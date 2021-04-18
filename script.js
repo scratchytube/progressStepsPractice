@@ -1,3 +1,24 @@
+// We need to grab all the elements that we want to manipulate
+// set the current active to a variable that can change
+// add event listeners to the button to increment and decrement the current active
+// add an update function that updates the dom
+// the update function loops through our circles and if the index of that circle is less than the current active
+// if true we add the active class to it
+// if false we remove the active class from circles
+// so now our circles are highlighted or not based on this logic
+// then we grab all of our active circles
+// we need to see how many active circles we have and how many circles overall we have
+// we divide the two numbers and multiply it by 100 to get a percentage
+// but we need it to go to the right places. initially is goes to 50% 75% and 100%...We need 33% and 66%
+// so we take the length of both nodes and minus one. That gives us the right percentage
+// then we do our button logic
+// we check to see if the current active is equal to one 
+// if it is we want the previous button to be disabled
+// if current active is equal to the length/end of the node list..4 here.. we want to disable the next button
+// if both of those statements are false aka we're in the middle, we want both buttons to be enabled
+
+
+
 
 // Dom shit
 const progress = document.querySelector('#progress')
@@ -50,6 +71,7 @@ const update = () => {
     const actives = document.querySelectorAll('.active')
 // we want to handle our progress bar here
 // we look to see how many active circles we have and how many circles in general we have
+// then we want to divide the two and multiply it by 100 to get a number we can add a percentage to
 // we want to get a percentage for our progress width
 // in our css progress class we have a width propert of 0% set as default
 // when we multiply by 100 it gives us an actual percentage
